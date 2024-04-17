@@ -24,4 +24,4 @@ const App = () => {
   );
 }
 
-export default App; // enables importing App in other files
+export default App;

@@ -5,33 +5,35 @@ class Movie extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        movie: null,
+      movie: null,
     }
   }
 
-  componentDidMount() {
+  componentDidMount () {
     fetch(`https://www.omdbapi.com/?i=${this.props.match.params.id}&apikey=b7da8d63`)
-    .then(checkStatus)
-    .then(json)
-    .then((data) => {
-      if (data.Response === 'False') {
-        throw new Error(data.Error);
-      }
-      if (data.Response === 'True') {
-        console.log(data);
-        this.setState({ movie: data, error: '' });
-      }
-    })
-    .catch((error) => {
-      this.setState({ error: error.message });
-      console.log(error);
-    })
+      .then(checkStatus)
+      .then(json)
+      .then((data) => {
+        if (data.Response === 'False') {
+          throw new Error(data.Error);
+        }
+
+        if (data.Response === 'True') {
+          console.log(data);
+          this.setState({ movie: data, error: '' });
+        }
+      })
+      .catch((error) => {
+        this.setState({ error: error.message });
+        console.log(error);
+      })
   }
 
   render() {
     if (!this.state.movie) {
       return null;
     }
+
     const {
       Title,
       Year,
@@ -40,7 +42,7 @@ class Movie extends React.Component {
       imdbRating,
       Poster,
     } = this.state.movie;
-    
+
     return (
       <div className="container">
         <div className="row pt-5">
