@@ -1,8 +1,11 @@
 {
   "name": "first-react-app",
   "version": "0.1.0",
-  "homepage": "https://mmarie198.github.io/first-react-app/",
   "private": true,
+  "engines": {
+    "npm": "10.5.0",
+    "node": "v20.12.1"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -20,12 +23,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
