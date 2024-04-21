@@ -1,7 +1,7 @@
 {
   "name": "first-react-app",
   "version": "0.1.0",
-  "homepage": "https://mmarie198.github.io/create-react-app",
+  "homepage": "https://mmarie198.github.io/first-react-app/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -15,8 +15,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "npm run build && gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
